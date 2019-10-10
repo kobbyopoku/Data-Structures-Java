@@ -11,6 +11,9 @@ package com.mycompany.datastructuresjava.linear;
  */
 public class Stack {
 
+    
+    //Implementation of how stacks work in Java
+    
     static final int MAX = 1000;
     int top;
     int a[] = new int[MAX];
@@ -23,6 +26,9 @@ public class Stack {
         top = -1;
     }
 
+    
+    // how the push method that adds items to the stack
+    
     boolean push(int x) {
         if (top >= (MAX - 1)) {
             System.out.println("Stack Overflow");
@@ -34,6 +40,8 @@ public class Stack {
         }
     }
 
+    
+    //how the pop method works
     int pop() {
         if(top < 0){
             System.out.println("Stack Underflow");
@@ -43,6 +51,9 @@ public class Stack {
             return x;
         }
     }
+    
+    
+    //how the peek method works
     
     int peek(){
         if(top < 0){

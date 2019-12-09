@@ -83,8 +83,20 @@ public class OurQueue<X> {
 
         return found;
     }
-    
-    public X access(int position){
-        return null;
+
+    public X access(int position) {
+
+        if (size() == 0 || position > size()) {
+            throw new IllegalStateException("");
+        }
+        int trueIndex = 0;
+        for (int i = front; i < end; i++) {
+            if (trueIndex == position) {
+                return data[i];
+            }
+            trueIndex++;
+        }
+
+        throw new IllegalStateException("Could not get item at position " + position + " on queue");
     }
 }

@@ -9,7 +9,7 @@ package com.mycompany.datastructuresjava.linear;
  *
  * @author kay
  */
-public class Stack {
+public class OurStack {
 
     
     //Implementation of how stacks work in Java
@@ -22,8 +22,8 @@ public class Stack {
         return top < 0;
     }
 
-    Stack() {
-        top = -1;
+    OurStack() {
+        top = -1; 
     }
 
     

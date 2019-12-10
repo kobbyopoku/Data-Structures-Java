@@ -37,6 +37,24 @@ public class OurLinkedList<X> {
         nodeCount++;
     }
 
+    public void insert(X item, int position) {
+        if (size() < position) {
+            throw new IllegalStateException("The linkedlist is smaller than the osition you are trying to insert the item");
+        }
+
+        Node currentNode = first;
+
+        for (int i = 1; i < position && currentNode != null; i++) {
+            currentNode = currentNode.getNextNode();
+        }
+
+        Node newNode = new Node(item);
+        Node netxNode = currentNode.getNextNode();
+        currentNode.setNextNode(newNode);
+        newNode.setNextNode(netxNode);
+        nodeCount++;
+    }
+
     public X remove() {
         if (first == null) {
             throw new IllegalStateException("There are no items on the list");
